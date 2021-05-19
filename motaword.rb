@@ -31,6 +31,5 @@ class Motaword < Formula
 
   test do
     system "#{bin}/motaword --version"
-    ...
   end
 end
