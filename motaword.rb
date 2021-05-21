@@ -5,24 +5,24 @@
 class Motaword < Formula
   desc "Use MotaWord CLI to interact with your MotaWord account in many ways to manage your translation and localization needs. Visit motaword.com/developer for details."
   homepage "https://www.motaword.com/"
-  version "1.1.0-rc1"
+  version "1.1.1-rc1"
   bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/motaword/cli/releases/download/v1.1.0-rc1/motaword_1.1.0-rc1_Darwin_x86_64.tar.gz"
-    sha256 "9b9538e5c7f9b0114ae4dd18c32323d43ddc6fa052284e69bd7d8410d3231bbe"
+    url "https://github.com/motaword/cli/releases/download/v1.1.1-rc1/motaword_1.1.1-rc1_Darwin_x86_64.tar.gz"
+    sha256 "54be9cb17c9a93867b40d8c986659f555ca469c86307294610f3670929ac2402"
   end
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/motaword/cli/releases/download/v1.1.0-rc1/motaword_1.1.0-rc1_Darwin_arm64.tar.gz"
-    sha256 "f358ab5ff502280082454162f98b0bdb30456a7f5c737fd2f5b3a4ad0a972226"
+    url "https://github.com/motaword/cli/releases/download/v1.1.1-rc1/motaword_1.1.1-rc1_Darwin_arm64.tar.gz"
+    sha256 "9880cc067e7d5aa2ce73bca127ed8a848923ba811340e583a6b1653c44c83f57"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/motaword/cli/releases/download/v1.1.0-rc1/motaword_1.1.0-rc1_Linux_x86_64.tar.gz"
-    sha256 "1de192919cfea86662071633c18ff7c7aafdbb035c7496399c3ca305fc5a75fa"
+    url "https://github.com/motaword/cli/releases/download/v1.1.1-rc1/motaword_1.1.1-rc1_Linux_x86_64.tar.gz"
+    sha256 "8fc6b326557fa73fbf418543c42d5f274faf6b3c3e3c4ec8726283381bebeb51"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/motaword/cli/releases/download/v1.1.0-rc1/motaword_1.1.0-rc1_Linux_arm64.tar.gz"
-    sha256 "f7d8d15bfe6f776a810376dc7057fa72196f39c29a9bf0371d7f43f014eabc0b"
+    url "https://github.com/motaword/cli/releases/download/v1.1.1-rc1/motaword_1.1.1-rc1_Linux_arm64.tar.gz"
+    sha256 "3f95ae98470d852cc60bb4dce6e8822cdf71b9794b62b8fb59deaff8fe1cec13"
   end
 
   def install
