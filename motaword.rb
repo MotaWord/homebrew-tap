@@ -5,24 +5,24 @@
 class Motaword < Formula
   desc "Use MotaWord CLI to interact with your MotaWord account in many ways to manage your translation and localization needs. Visit motaword.com/developer for details."
   homepage "https://www.motaword.com/"
-  version "1.2"
+  version "1.2.1"
   bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/motaword/cli/releases/download/v1.2/motaword_1.2_Darwin_x86_64.tar.gz"
-    sha256 "b92f21020fd134b599e725e10330445fc4d5952cb200721daefa717c8b4936c5"
+    url "https://github.com/motaword/cli/releases/download/v1.2.1/motaword_1.2.1_Darwin_x86_64.tar.gz"
+    sha256 "16e68f01b788ca62f8520abb71cf50d51ca1c3dae1e2d515604182612c3cb7d8"
   end
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/motaword/cli/releases/download/v1.2/motaword_1.2_Darwin_arm64.tar.gz"
-    sha256 "3a96ad61d2d6c91ae7d5e00c63860ef064e5acce022121c026c1231236e2a9ea"
+    url "https://github.com/motaword/cli/releases/download/v1.2.1/motaword_1.2.1_Darwin_arm64.tar.gz"
+    sha256 "e51c14d3f5a54355192afb60521a817c0a5de99494ce16f95ba3c9a65f1ce9fb"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/motaword/cli/releases/download/v1.2/motaword_1.2_Linux_x86_64.tar.gz"
-    sha256 "e9c1b77fb18575f5c6e439f9c328f3ef9b5d54075e1bfea87f2c096119df6d4a"
+    url "https://github.com/motaword/cli/releases/download/v1.2.1/motaword_1.2.1_Linux_x86_64.tar.gz"
+    sha256 "aa28cf2804f8e24308140bbd1656c7fb44871d7d4ad90eb474a636b354dd5b6e"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/motaword/cli/releases/download/v1.2/motaword_1.2_Linux_arm64.tar.gz"
-    sha256 "59168e5e0980fe509e10c5c2ed2298dda2037e0b2f56b1c242544f41eaba1ad2"
+    url "https://github.com/motaword/cli/releases/download/v1.2.1/motaword_1.2.1_Linux_arm64.tar.gz"
+    sha256 "1436d82415959405daf5ee1044f07d35c9589c3ec53f335b529f4923f7d12cd8"
   end
 
   def install
