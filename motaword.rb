@@ -5,20 +5,20 @@
 class Motaword < Formula
   desc "Use MotaWord CLI to interact with your MotaWord account in many ways to manage your translation and localization needs. Visit motaword.com/developer for details."
   homepage "https://www.motaword.com/"
-  version "1.5.0"
+  version "1.5.1"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/motaword/cli/releases/download/v1.5.0/motaword_1.5.0_Darwin_arm64.tar.gz"
-      sha256 "a092b39ce920070fff943cb8b627c4ee814e37799c2ea93ac93f70087386a94c"
+      url "https://github.com/motaword/cli/releases/download/v1.5.1/motaword_1.5.1_Darwin_arm64.tar.gz"
+      sha256 "96066b6eecec5a8e2a9f115e3514ea696b8e4bddf6f42f279611e916e316dfaa"
 
       def install
         bin.install "motaword"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/motaword/cli/releases/download/v1.5.0/motaword_1.5.0_Darwin_x86_64.tar.gz"
-      sha256 "50cf5a115ab7b2cbad5e4f2d8c7af47f0e8fd52da18ba783124174e1baeb7a03"
+      url "https://github.com/motaword/cli/releases/download/v1.5.1/motaword_1.5.1_Darwin_x86_64.tar.gz"
+      sha256 "15eb003978e886a17f716036e551f6da3dae9bfb9d5529b9877a98850a95fd46"
 
       def install
         bin.install "motaword"
@@ -28,16 +28,16 @@ class Motaword < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/motaword/cli/releases/download/v1.5.0/motaword_1.5.0_Linux_arm64.tar.gz"
-      sha256 "57d73cb48f59c21ad5002c931240c03987703f8d0bec1ab091549c7b6df0856c"
+      url "https://github.com/motaword/cli/releases/download/v1.5.1/motaword_1.5.1_Linux_arm64.tar.gz"
+      sha256 "68d2b843298cb9200430f8f5d688de4545cb94f07f51471bc6c1e94b020929ca"
 
       def install
         bin.install "motaword"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/motaword/cli/releases/download/v1.5.0/motaword_1.5.0_Linux_x86_64.tar.gz"
-      sha256 "4a488deaa02df1758e9510520f912713d93401d34f07112bf429128477108784"
+      url "https://github.com/motaword/cli/releases/download/v1.5.1/motaword_1.5.1_Linux_x86_64.tar.gz"
+      sha256 "baaa2981299826bfe9940bb1e1ce172e61b5e059461ef9923d2cae53829be96f"
 
       def install
         bin.install "motaword"
