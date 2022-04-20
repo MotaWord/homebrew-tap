@@ -5,33 +5,44 @@
 class Motaword < Formula
   desc "Use MotaWord CLI to interact with your MotaWord account in many ways to manage your translation and localization needs. Visit motaword.com/developer for details."
   homepage "https://www.motaword.com/"
-  version "1.4.1"
-  bottle :unneeded
+  version "1.5.0"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/motaword/cli/releases/download/v1.4.1/motaword_1.4.1_Darwin_x86_64.tar.gz"
-      sha256 "cc530be4ccac4a90dfe54900406dc2d61708248dca2c010f0fdc865de7cd4d35"
-    end
     if Hardware::CPU.arm?
-      url "https://github.com/motaword/cli/releases/download/v1.4.1/motaword_1.4.1_Darwin_arm64.tar.gz"
-      sha256 "0f84a82411551f231a68b2effac0b5d69cf49c0d9e5da6990f4ed8bd689ceb09"
+      url "https://github.com/motaword/cli/releases/download/v1.5.0/motaword_1.5.0_Darwin_arm64.tar.gz"
+      sha256 "a092b39ce920070fff943cb8b627c4ee814e37799c2ea93ac93f70087386a94c"
+
+      def install
+        bin.install "motaword"
+      end
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/motaword/cli/releases/download/v1.5.0/motaword_1.5.0_Darwin_x86_64.tar.gz"
+      sha256 "50cf5a115ab7b2cbad5e4f2d8c7af47f0e8fd52da18ba783124174e1baeb7a03"
+
+      def install
+        bin.install "motaword"
+      end
     end
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/motaword/cli/releases/download/v1.4.1/motaword_1.4.1_Linux_x86_64.tar.gz"
-      sha256 "85647034931b1787f12a6aa81805f9bdb6ec3cda3c38cf50d0f4b52d7e5f1ec0"
-    end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/motaword/cli/releases/download/v1.4.1/motaword_1.4.1_Linux_arm64.tar.gz"
-      sha256 "8ebcc48b246bd38ac54a2abbcc6dd13c73fb1fb73f104591dcb8ec6ab6a01c06"
-    end
-  end
+      url "https://github.com/motaword/cli/releases/download/v1.5.0/motaword_1.5.0_Linux_arm64.tar.gz"
+      sha256 "57d73cb48f59c21ad5002c931240c03987703f8d0bec1ab091549c7b6df0856c"
 
-  def install
-    bin.install "motaword"
+      def install
+        bin.install "motaword"
+      end
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/motaword/cli/releases/download/v1.5.0/motaword_1.5.0_Linux_x86_64.tar.gz"
+      sha256 "4a488deaa02df1758e9510520f912713d93401d34f07112bf429128477108784"
+
+      def install
+        bin.install "motaword"
+      end
+    end
   end
 
   test do
